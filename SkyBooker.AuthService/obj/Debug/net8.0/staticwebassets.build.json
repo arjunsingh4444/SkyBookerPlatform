@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/jguITxmZZbt5V6pbLO0dQE8IiJmvAk1ha11LG9cl50=",
+  "Source": "SkyBooker.AuthService",
+  "BasePath": "_content/SkyBooker.AuthService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
