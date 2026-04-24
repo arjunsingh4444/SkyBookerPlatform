@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SkyBooker.BookingService": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5004",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
