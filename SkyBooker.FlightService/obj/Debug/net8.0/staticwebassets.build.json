@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Ar2Z21bRoPFqFGxyny94OXi4gVYiQ0BGISS7tGiFu8c=",
+  "Source": "SkyBooker.FlightService",
+  "BasePath": "_content/SkyBooker.FlightService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
