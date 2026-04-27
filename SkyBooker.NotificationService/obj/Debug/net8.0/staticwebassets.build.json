@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ovARTvTgNJhoW6raGI7qDXhZDdIwU+rDFuBnBGaz6uU=",
+  "Source": "SkyBooker.NotificationService",
+  "BasePath": "_content/SkyBooker.NotificationService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
