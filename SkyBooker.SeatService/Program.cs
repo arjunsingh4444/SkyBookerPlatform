@@ -149,7 +149,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<SeatDbContext>();
-    db.Database.EnsureCreated();
+    db.Database.Migrate();
 }
 
 // Middleware pipeline

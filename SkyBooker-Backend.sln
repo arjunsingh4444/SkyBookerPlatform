@@ -1,8 +1,30 @@
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.AuthService", "SkyBooker.AuthService\SkyBooker.AuthService.csproj", "{ACB08677-98ED-C46E-1093-9697C4E0AECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.FlightService", "SkyBooker.FlightService\SkyBooker.FlightService.csproj", "{4B1AFAC7-7311-40F1-A3D6-604B88D0DBCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.SeatService", "SkyBooker.SeatService\SkyBooker.SeatService.csproj", "{C4E65784-7A57-4CF9-8E60-24EDCDD0F7E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.BookingService", "SkyBooker.BookingService\SkyBooker.BookingService.csproj", "{A13A2D5A-E838-49E6-8940-2F9066ECE537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.PassengerService", "SkyBooker.PassengerService\SkyBooker.PassengerService.csproj", "{D443277F-599E-471B-954A-8B136745EFC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.NotificationService", "SkyBooker.NotificationService\SkyBooker.NotificationService.csproj", "{0D3376FE-5FFC-4ADF-808D-6C131018C7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.AuthService.Tests", "SkyBooker.AuthService.Tests\SkyBooker.AuthService.Tests.csproj", "{DABD4B0B-00A5-4390-8D30-92999D686CF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.FlightService.Tests", "SkyBooker.FlightService.Tests\SkyBooker.FlightService.Tests.csproj", "{DC0D31F9-AD51-4C25-977A-7753AB0D981C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.SeatService.Tests", "SkyBooker.SeatService.Tests\SkyBooker.SeatService.Tests.csproj", "{F9BCB397-6BDE-4941-A8AD-4B2FE29AAE93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.BookingService.Tests", "SkyBooker.BookingService.Tests\SkyBooker.BookingService.Tests.csproj", "{FC8DCD7D-D2EE-47CF-ADA9-641D5BF64DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.PassengerService.Tests", "SkyBooker.PassengerService.Tests\SkyBooker.PassengerService.Tests.csproj", "{53DCDFDB-72FD-438F-9D1E-6C75C2AF0816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBooker.NotificationService.Tests", "SkyBooker.NotificationService.Tests\SkyBooker.NotificationService.Tests.csproj", "{B4127429-D288-43C7-82DF-77E85AED9E8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,6 +36,50 @@ Global
 		{ACB08677-98ED-C46E-1093-9697C4E0AECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACB08677-98ED-C46E-1093-9697C4E0AECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACB08677-98ED-C46E-1093-9697C4E0AECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B1AFAC7-7311-40F1-A3D6-604B88D0DBCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B1AFAC7-7311-40F1-A3D6-604B88D0DBCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B1AFAC7-7311-40F1-A3D6-604B88D0DBCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B1AFAC7-7311-40F1-A3D6-604B88D0DBCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E65784-7A57-4CF9-8E60-24EDCDD0F7E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E65784-7A57-4CF9-8E60-24EDCDD0F7E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E65784-7A57-4CF9-8E60-24EDCDD0F7E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E65784-7A57-4CF9-8E60-24EDCDD0F7E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A13A2D5A-E838-49E6-8940-2F9066ECE537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A13A2D5A-E838-49E6-8940-2F9066ECE537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A13A2D5A-E838-49E6-8940-2F9066ECE537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A13A2D5A-E838-49E6-8940-2F9066ECE537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D443277F-599E-471B-954A-8B136745EFC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D443277F-599E-471B-954A-8B136745EFC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D443277F-599E-471B-954A-8B136745EFC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D443277F-599E-471B-954A-8B136745EFC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D3376FE-5FFC-4ADF-808D-6C131018C7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D3376FE-5FFC-4ADF-808D-6C131018C7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D3376FE-5FFC-4ADF-808D-6C131018C7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D3376FE-5FFC-4ADF-808D-6C131018C7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABD4B0B-00A5-4390-8D30-92999D686CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABD4B0B-00A5-4390-8D30-92999D686CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABD4B0B-00A5-4390-8D30-92999D686CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABD4B0B-00A5-4390-8D30-92999D686CF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC0D31F9-AD51-4C25-977A-7753AB0D981C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC0D31F9-AD51-4C25-977A-7753AB0D981C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC0D31F9-AD51-4C25-977A-7753AB0D981C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC0D31F9-AD51-4C25-977A-7753AB0D981C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BCB397-6BDE-4941-A8AD-4B2FE29AAE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BCB397-6BDE-4941-A8AD-4B2FE29AAE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BCB397-6BDE-4941-A8AD-4B2FE29AAE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BCB397-6BDE-4941-A8AD-4B2FE29AAE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC8DCD7D-D2EE-47CF-ADA9-641D5BF64DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC8DCD7D-D2EE-47CF-ADA9-641D5BF64DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC8DCD7D-D2EE-47CF-ADA9-641D5BF64DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC8DCD7D-D2EE-47CF-ADA9-641D5BF64DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DCDFDB-72FD-438F-9D1E-6C75C2AF0816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DCDFDB-72FD-438F-9D1E-6C75C2AF0816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DCDFDB-72FD-438F-9D1E-6C75C2AF0816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DCDFDB-72FD-438F-9D1E-6C75C2AF0816}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4127429-D288-43C7-82DF-77E85AED9E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4127429-D288-43C7-82DF-77E85AED9E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4127429-D288-43C7-82DF-77E85AED9E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4127429-D288-43C7-82DF-77E85AED9E8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
