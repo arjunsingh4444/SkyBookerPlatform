@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: auth-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.AuthService
+    plan: free
+
+  - type: web
+    name: flight-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.FlightService
+    plan: free
+
+  - type: web
+    name: seat-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.SeatService
+    plan: free
+
+  - type: web
+    name: booking-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.BookingService
+    plan: free
+
+  - type: web
+    name: passenger-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.PassengerService
+    plan: free
+
+  - type: web
+    name: notification-service
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.NotificationService
+    plan: free
+
+  - type: web
+    name: skybooker-apigateway
+    env: docker
+    dockerContext: ./SkyBookerPlatform/SkyBooker.ApiGateway
+    plan: free
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
