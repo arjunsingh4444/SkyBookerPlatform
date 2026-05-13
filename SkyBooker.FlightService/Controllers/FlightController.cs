@@ -94,4 +94,14 @@ public class FlightController : ControllerBase
 
         return Ok(result);
     }
+
+    // ──────────── POST /api/Flight/{id}/adjust-seats ────────────
+    // Adjust available seats (called by BookingService)
+    [HttpPost("{id}/adjust-seats")]
+    public async Task<IActionResult> AdjustSeats(int id, [FromQuery] int adjustment)
+    {
+        var result = await _flightService.AdjustAvailableSeatsAsync(id, adjustment);
+        if (!result.Success) return BadRequest(result);
+        return Ok(result);
+    }
 }

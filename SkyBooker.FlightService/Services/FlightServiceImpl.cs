@@ -128,6 +128,24 @@ public class FlightServiceImpl : IFlightService
         return ApiResponse.Ok("Flight deleted successfully");
     }
 
+    // ──────────── ADJUST AVAILABLE SEATS ────────────
+    public async Task<ApiResponse> AdjustAvailableSeatsAsync(int id, int adjustment)
+    {
+        var flight = await _flightRepository.GetByIdAsync(id);
+        if (flight == null) return ApiResponse.Fail("Flight not found");
+
+        flight.AvailableSeats += adjustment;
+        
+        // Ensure available seats don't go below 0 or above total seats
+        if (flight.AvailableSeats < 0) flight.AvailableSeats = 0;
+        if (flight.AvailableSeats > flight.TotalSeats) flight.AvailableSeats = flight.TotalSeats;
+
+        await _flightRepository.UpdateAsync(flight);
+        _logger.LogInformation("Adjusted seats for flight {Id} by {Adjustment}. New available: {Available}", id, adjustment, flight.AvailableSeats);
+        
+        return ApiResponse.Ok("Seat count adjusted successfully");
+    }
+
     // ──────────── HELPER: Convert Flight entity → FlightResponseDto ────────────
     private static FlightResponseDto MapToDto(Flight flight)
     {

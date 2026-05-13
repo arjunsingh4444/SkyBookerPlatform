@@ -57,6 +57,14 @@ public class BookingController : ControllerBase
         return Ok(result);
     }
 
+    [HttpPut("{id}")]
+    public async Task<IActionResult> UpdateBooking(int id, [FromBody] UpdateBookingDto dto)
+    {
+        var result = await _bookingService.UpdateBookingAsync(id, GetUserId(), GetUserRole(), dto);
+        if (!result.Success) return BadRequest(result);
+        return Ok(result);
+    }
+
     // Admin Only
     [HttpGet("all")]
     [Authorize(Roles = "Admin")]

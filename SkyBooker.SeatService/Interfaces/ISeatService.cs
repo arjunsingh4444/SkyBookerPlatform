@@ -11,5 +11,7 @@ public interface ISeatService
     Task<ApiResponse> GenerateSeatsAsync(GenerateSeatsDto dto);
     Task<ApiResponse<SeatResponseDto>> LockSeatAsync(SeatActionDto dto);
     Task<ApiResponse<SeatResponseDto>> BookSeatAsync(SeatActionDto dto);
+    Task<ApiResponse<SeatResponseDto>> UpdateSeatAsync(int id, UpdateSeatDto dto);
+    Task<ApiResponse> DeleteSeatAsync(int id);
     Task<ApiResponse> UnlockExpiredSeatsAsync();
 }

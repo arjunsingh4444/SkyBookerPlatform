@@ -10,4 +10,5 @@ public interface IBookingService
     Task<ApiResponse<List<BookingResponseDto>>> GetMyBookingsAsync(int userId);
     Task<ApiResponse<List<BookingResponseDto>>> GetAllBookingsAsync(); // Admin only
     Task<ApiResponse> CancelBookingAsync(int id, int userId, string role);
+    Task<ApiResponse> UpdateBookingAsync(int id, int userId, string role, UpdateBookingDto dto);
 }

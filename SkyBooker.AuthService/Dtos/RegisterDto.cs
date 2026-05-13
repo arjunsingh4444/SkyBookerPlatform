@@ -21,4 +21,6 @@ public class RegisterDto
 
     [Phone(ErrorMessage = "Invalid phone number")]
     public string Phone { get; set; } = string.Empty;
+
+    public string Role { get; set; } = "User"; // Default to User
 }

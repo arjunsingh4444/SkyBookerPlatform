@@ -142,6 +142,34 @@ public class SeatServiceImpl : ISeatService
         return ApiResponse<SeatResponseDto>.Ok(MapToDto(seat), "Seat booked successfully");
     }
 
+    // ──────────── UPDATE SEAT ────────────
+    public async Task<ApiResponse<SeatResponseDto>> UpdateSeatAsync(int id, UpdateSeatDto dto)
+    {
+        var seat = await _seatRepo.GetByIdAsync(id);
+        if (seat == null) return ApiResponse<SeatResponseDto>.Fail("Seat not found");
+
+        seat.SeatClass = dto.SeatClass;
+        seat.Price = dto.Price;
+
+        if (Enum.TryParse<SeatStatus>(dto.Status, true, out var parsedStatus))
+        {
+            seat.Status = parsedStatus;
+        }
+
+        await _seatRepo.UpdateAsync(seat);
+        return ApiResponse<SeatResponseDto>.Ok(MapToDto(seat), "Seat updated successfully");
+    }
+
+    // ──────────── DELETE SEAT ────────────
+    public async Task<ApiResponse> DeleteSeatAsync(int id)
+    {
+        var seat = await _seatRepo.GetByIdAsync(id);
+        if (seat == null) return ApiResponse.Fail("Seat not found");
+
+        await _seatRepo.DeleteAsync(seat);
+        return ApiResponse.Ok("Seat deleted successfully");
+    }
+
     // ──────────── UNLOCK EXPIRED SEATS ────────────
     public async Task<ApiResponse> UnlockExpiredSeatsAsync()
     {

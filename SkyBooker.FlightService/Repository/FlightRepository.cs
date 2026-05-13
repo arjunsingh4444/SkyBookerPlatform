@@ -16,10 +16,14 @@ public class FlightRepository : IFlightRepository
         _context = context;
     }
 
-    // Get all flights
+    // Get all flights (only upcoming)
     public async Task<List<Flight>> GetAllAsync()
     {
-        return await _context.Flights.OrderBy(f => f.DepartureTime).ToListAsync();
+        var now = DateTime.UtcNow;
+        return await _context.Flights
+            .Where(f => f.DepartureTime > now)
+            .OrderBy(f => f.DepartureTime)
+            .ToListAsync();
     }
 
     // Find flight by ID
@@ -38,7 +42,8 @@ public class FlightRepository : IFlightRepository
     // Search flights by source, destination, and/or date
     public async Task<List<Flight>> SearchAsync(string? source, string? destination, DateTime? date)
     {
-        var query = _context.Flights.AsQueryable();
+        var now = DateTime.UtcNow;
+        var query = _context.Flights.Where(f => f.DepartureTime > now).AsQueryable();
 
         if (!string.IsNullOrWhiteSpace(source))
             query = query.Where(f => f.Source.ToLower().Contains(source.ToLower()));

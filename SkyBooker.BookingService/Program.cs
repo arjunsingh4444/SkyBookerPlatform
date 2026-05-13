@@ -13,75 +13,69 @@ using SkyBooker.BookingService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<BookingDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
+// Http Client Setup
+builder.Services.AddHttpClient();
 
+// Database Setup
+builder.Services.AddDbContext<BookingDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Dependency Injection
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
 builder.Services.AddScoped<IBookingService, BookingServiceImpl>();
 
+// JWT Authentication
 var jwtSettings = builder.Configuration.GetSection("JwtSettings");
-string secretKey = jwtSettings["SecretKey"]!;
+var secretKey = Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]!);
 
-builder.Services.AddAuthentication(options =>
-{
-    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-})
-.AddJwtBearer(options =>
-{
-    options.TokenValidationParameters = new TokenValidationParameters
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        ValidateIssuer = true,
-        ValidateAudience = true,
-        ValidateLifetime = true,
-        ValidateIssuerSigningKey = true,
-        ValidIssuer = jwtSettings["Issuer"],
-        ValidAudience = jwtSettings["Audience"],
-        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey))
-    };
-
-    options.Events = new JwtBearerEvents
-    {
-        OnChallenge = async context =>
+        options.TokenValidationParameters = new TokenValidationParameters
         {
-            context.HandleResponse();
-            context.Response.StatusCode = 401;
-            context.Response.ContentType = "application/json";
-            await context.Response.WriteAsJsonAsync(ApiResponse.Fail("Unauthorized. Please provide a valid token."));
-        },
-        OnForbidden = async context =>
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidAudience = jwtSettings["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(secretKey)
+        };
+        
+        options.Events = new JwtBearerEvents
         {
-            context.Response.StatusCode = 403;
-            context.Response.ContentType = "application/json";
-            await context.Response.WriteAsJsonAsync(ApiResponse.Fail("Forbidden. You don't have permission."));
-        }
-    };
-});
-
-builder.Services.AddAuthorization();
-
-builder.Services.AddControllers()
-    .ConfigureApiBehaviorOptions(options =>
-    {
-        options.InvalidModelStateResponseFactory = context =>
-        {
-            var errors = context.ModelState
-                .Where(e => e.Value?.Errors.Count > 0)
-                .SelectMany(e => e.Value!.Errors.Select(err => err.ErrorMessage))
-                .ToList();
-            return new BadRequestObjectResult(ApiResponse.Fail(string.Join("; ", errors)));
+            OnChallenge = async context =>
+            {
+                context.HandleResponse();
+                context.Response.StatusCode = 401;
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsJsonAsync(ApiResponse.Fail("Unauthorized. Please provide a valid token."));
+            },
+            OnForbidden = async context =>
+            {
+                context.Response.StatusCode = 403;
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsJsonAsync(ApiResponse.Fail("Forbidden. You don't have permission."));
+            }
         };
     });
 
-builder.Services.AddCors(options =>
+builder.Services.AddAuthorization();
+
+// Controllers and Validation
+builder.Services.AddControllers().ConfigureApiBehaviorOptions(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.InvalidModelStateResponseFactory = context =>
     {
-        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    });
+        var errors = context.ModelState.Values.SelectMany(e => e.Errors.Select(err => err.ErrorMessage));
+        return new BadRequestObjectResult(ApiResponse.Fail(string.Join("; ", errors)));
+    };
 });
 
+// CORS
+builder.Services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -90,21 +84,23 @@ builder.Services.AddSwaggerGen(options =>
     {
         Name = "Authorization", Type = SecuritySchemeType.Http, Scheme = "Bearer", BearerFormat = "JWT", In = ParameterLocation.Header
     });
-    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
         { new OpenApiSecurityScheme { Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" } }, Array.Empty<string>() }
     });
 });
 
 var app = builder.Build();
 
+// Database Migrations
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<BookingDbContext>();
-    db.Database.Migrate();
+    scope.ServiceProvider.GetRequiredService<BookingDbContext>().Database.Migrate();
 }
 
+// Middleware Pipeline
 app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBooker-BookingService v1"));
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBooker-BookingService v1"));
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
 app.UseCors("AllowAll");

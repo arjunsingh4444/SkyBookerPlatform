@@ -84,4 +84,24 @@ public class SeatController : ControllerBase
         if (!result.Success) return BadRequest(result);
         return Ok(result);
     }
+
+    // ──────────── PUT /api/Seat/{id} ────────────
+    [HttpPut("{id}")]
+    [Authorize]
+    public async Task<IActionResult> Update(int id, [FromBody] UpdateSeatDto dto)
+    {
+        var result = await _seatService.UpdateSeatAsync(id, dto);
+        if (!result.Success) return BadRequest(result);
+        return Ok(result);
+    }
+
+    // ──────────── DELETE /api/Seat/{id} ────────────
+    [HttpDelete("{id}")]
+    [Authorize]
+    public async Task<IActionResult> Delete(int id)
+    {
+        var result = await _seatService.DeleteSeatAsync(id);
+        if (!result.Success) return BadRequest(result);
+        return Ok(result);
+    }
 }

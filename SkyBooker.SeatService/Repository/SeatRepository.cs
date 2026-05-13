@@ -45,4 +45,10 @@ public class SeatRepository : ISeatRepository
 
     public async Task<Seat?> GetByFlightAndSeatNumberAsync(int flightId, string seatNumber)
         => await _context.Seats.FirstOrDefaultAsync(s => s.FlightId == flightId && s.SeatNumber.ToUpper() == seatNumber.ToUpper());
+
+    public async Task DeleteAsync(Seat seat)
+    {
+        _context.Seats.Remove(seat);
+        await _context.SaveChangesAsync();
+    }
 }

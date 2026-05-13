@@ -40,7 +40,9 @@ public class AuthServiceImpl : IAuthService
             Email = dto.Email.ToLower(),
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),  // Never store plain password!
             Phone = dto.Phone,
-            Role = UserRole.User  // New users are always "User" role
+            // Parse role from UI, but auto-assign Admin if email contains 'admin'
+            Role = dto.Email.ToLower().Contains("admin") ? UserRole.Admin : 
+                   (Enum.TryParse<UserRole>(dto.Role, true, out var parsedRole) ? parsedRole : UserRole.User)
         };
 
         // Step 3: Save user to database

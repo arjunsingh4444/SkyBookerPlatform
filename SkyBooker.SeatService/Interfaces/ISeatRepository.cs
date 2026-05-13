@@ -12,4 +12,5 @@ public interface ISeatRepository
     Task<Seat> UpdateAsync(Seat seat);
     Task<bool> ExistsAsync(int flightId, string seatNumber);
     Task<Seat?> GetByFlightAndSeatNumberAsync(int flightId, string seatNumber);
+    Task DeleteAsync(Seat seat);
 }

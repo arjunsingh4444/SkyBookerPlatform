@@ -4,8 +4,8 @@ namespace SkyBooker.FlightService.Entities;
 
 public class Flight : BaseEntity
 {
-    public string FlightNumber { get; set; } = string.Empty;       // e.g. "SK-101"
-    public string AirlineName { get; set; } = string.Empty;        // e.g. "SkyBooker Airlines"
+    public string FlightNumber { get; set; } = string.Empty;       // like that  "SK-101"
+    public string AirlineName { get; set; } = string.Empty;        // like it  "SkyBooker Airlines"
     public string Source { get; set; } = string.Empty;              // Departure city (e.g. "Delhi")
     public string Destination { get; set; } = string.Empty;         // Arrival city (e.g. "Mumbai")
     public DateTime DepartureTime { get; set; }                     // When the flight departs

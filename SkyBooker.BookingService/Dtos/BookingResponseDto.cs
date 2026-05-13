@@ -10,5 +10,7 @@ public class BookingResponseDto
     public decimal TotalAmount { get; set; }
     public string Status { get; set; } = string.Empty;
     public string PassengerName { get; set; } = string.Empty;
+    public string PassengerEmail { get; set; } = string.Empty;
+    public string PassengerPhone { get; set; } = string.Empty;
     public DateTime CreatedAt { get; set; }
 }

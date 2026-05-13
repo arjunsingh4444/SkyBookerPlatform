@@ -71,6 +71,24 @@ public class AuthController : ControllerBase
         return Ok(result);                  // 200 - returns user info
     }
 
+    // ──────────── GET /api/Auth/profile ────────────
+    // Returns the profile of the currently logged-in user
+    [HttpGet("profile")]
+    [Authorize]
+    public async Task<IActionResult> GetMyProfile()
+    {
+        var userId = GetUserIdFromToken();
+        if (userId == null)
+            return Unauthorized(ApiResponse.Fail("Invalid or missing token"));
+
+        var result = await _authService.GetProfileAsync(userId.Value);
+
+        if (!result.Success)
+            return NotFound(result);        // 404 - user not found
+
+        return Ok(result);                  // 200 - returns user info
+    }
+
     // ──────────── PUT /api/Auth/update-profile ────────────
     // Pass user ID in the body along with fields to update
     [HttpPut("update-profile")]
@@ -86,13 +104,10 @@ public class AuthController : ControllerBase
     }
 
     // ──────────── POST /api/Auth/logout ────────────
-    // Protected: user must send JWT token in header
     [HttpPost("logout")]
     [Authorize]
     public IActionResult Logout()
     {
-        // JWT is stateless, so we just return success.
-        // The frontend should delete the token from storage.
         return Ok(ApiResponse.Ok("Logged out successfully"));
     }
 

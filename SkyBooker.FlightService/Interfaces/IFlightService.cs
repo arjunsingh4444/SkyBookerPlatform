@@ -11,4 +11,5 @@ public interface IFlightService
     Task<ApiResponse> CreateFlightAsync(CreateFlightDto dto);
     Task<ApiResponse<FlightResponseDto>> UpdateFlightAsync(UpdateFlightDto dto);
     Task<ApiResponse> DeleteFlightAsync(int id);
+    Task<ApiResponse> AdjustAvailableSeatsAsync(int id, int adjustment);
 }

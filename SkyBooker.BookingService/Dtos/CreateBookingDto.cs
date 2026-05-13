@@ -21,4 +21,6 @@ public class CreateBookingDto
     public string PassengerEmail { get; set; } = string.Empty;
 
     public string PassengerPhone { get; set; } = string.Empty;
+
+    public string? Status { get; set; } // Optional: Confirmed or Pending
 }

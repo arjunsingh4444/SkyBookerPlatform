@@ -4,20 +4,17 @@ using SkyBooker.NotificationService.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Database Setup
 builder.Services.AddDbContext<NotificationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
-);
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Controllers
 builder.Services.AddControllers();
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll", policy =>
-    {
-        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-    });
-});
+// CORS
+builder.Services.AddCors(options => options.AddPolicy("AllowAll", p => p.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
 
+// Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -26,14 +23,15 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+// Database Migrations
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<NotificationDbContext>();
-    db.Database.Migrate();
+    scope.ServiceProvider.GetRequiredService<NotificationDbContext>().Database.Migrate();
 }
 
+// Middleware Pipeline
 app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBooker-NotificationService v1"));
+app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "SkyBooker-NotificationService v1"));
 
 app.UseCors("AllowAll");
 app.MapControllers();
