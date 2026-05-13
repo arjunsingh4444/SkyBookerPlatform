@@ -10,11 +10,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Auth/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth-service",
-          "Port": 8080
+          "Host": "auth-service-f434.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -26,11 +26,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Auth",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "auth-service",
-          "Port": 8080
+          "Host": "auth-service-f434.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -44,11 +44,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Flight/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "flight-service",
-          "Port": 8080
+          "Host": "flight-service-c8e9.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -60,11 +60,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Flight",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "flight-service",
-          "Port": 8080
+          "Host": "flight-service-c8e9.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -78,11 +78,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Seat/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "seat-service",
-          "Port": 8080
+          "Host": "seat-service-69hs.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -94,11 +94,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Seat",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "seat-service",
-          "Port": 8080
+          "Host": "seat-service-69hs.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -112,11 +112,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Booking/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "booking-service",
-          "Port": 8080
+          "Host": "booking-service-0lki.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -128,11 +128,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Booking",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "booking-service",
-          "Port": 8080
+          "Host": "booking-service-0lki.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -146,11 +146,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Passenger/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "passenger-service",
-          "Port": 8080
+          "Host": "passenger-service.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -162,11 +162,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Passenger",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "passenger-service",
-          "Port": 8080
+          "Host": "passenger-service.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -180,11 +180,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Notification/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "notification-service",
-          "Port": 8080
+          "Host": "notification-service-cl34.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -196,11 +196,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Notification",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "notification-service",
-          "Port": 8080
+          "Host": "notification-service-cl34.onrender.com",
+          "Port": 443
         }
       ]
     }

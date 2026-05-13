@@ -10,11 +10,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Auth/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "auth-service-f434.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -26,11 +26,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Auth",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5001
+          "Host": "auth-service-f434.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -44,11 +44,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Flight/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "flight-service-c8e9.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -60,11 +60,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Flight",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5002
+          "Host": "flight-service-c8e9.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -78,11 +78,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Seat/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5003
+          "Host": "seat-service-69hs.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -94,11 +94,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Seat",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5003
+          "Host": "seat-service-69hs.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -112,11 +112,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Booking/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5004
+          "Host": "booking-service-0lki.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -128,11 +128,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Booking",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5004
+          "Host": "booking-service-0lki.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -146,11 +146,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Passenger/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5005
+          "Host": "passenger-service.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -162,11 +162,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Passenger",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5005
+          "Host": "passenger-service.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -180,11 +180,11 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Notification/{everything}",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5006
+          "Host": "notification-service-cl34.onrender.com",
+          "Port": 443
         }
       ]
     },
@@ -196,16 +196,16 @@
         "OPTIONS"
       ],
       "DownstreamPathTemplate": "/api/Notification",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5006
+          "Host": "notification-service-cl34.onrender.com",
+          "Port": 443
         }
       ]
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "BaseUrl": "https://skybooker-apigateway.onrender.com"
   }
 }
