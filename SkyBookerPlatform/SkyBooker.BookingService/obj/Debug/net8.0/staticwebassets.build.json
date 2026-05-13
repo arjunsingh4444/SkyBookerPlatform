@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OCbqQ/QFAyYHWPz7eESqxjc4QmPV0iUQNRZidttaA04=",
+  "Source": "SkyBooker.BookingService",
+  "BasePath": "_content/SkyBooker.BookingService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

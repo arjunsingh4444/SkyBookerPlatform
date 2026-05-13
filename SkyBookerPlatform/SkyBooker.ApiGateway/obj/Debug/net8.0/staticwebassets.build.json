@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Y5ZAfZK84RRUdzslDNnWI6Xw67juJ/xiuI45/mCA5nM=",
+  "Source": "SkyBooker.ApiGateway",
+  "BasePath": "_content/SkyBooker.ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "SkyBooker.NotificationService": {
+      "commandName": "Project",
+      "applicationUrl": "http://localhost:5006",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
