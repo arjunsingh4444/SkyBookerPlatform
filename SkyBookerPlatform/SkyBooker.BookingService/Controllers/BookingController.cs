@@ -9,7 +9,7 @@ namespace SkyBooker.BookingService.Controllers;
 [ApiController]
 [Route("api/[controller]")]
 [Authorize] // All booking endpoints require authentication
-public class BookingController : ControllerBase
+public class BookingController : ControllerBase 
 {
     private readonly IBookingService _bookingService;
 
