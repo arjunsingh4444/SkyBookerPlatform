@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "ovARTvTgNJhoW6raGI7qDXhZDdIwU+rDFuBnBGaz6uU=",
-  "Source": "SkyBooker.NotificationService",
-  "BasePath": "_content/SkyBooker.NotificationService",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"gVU6wrX8CHN9uOMlkPBRKB7ffbB9dpKivbOcqn+BWWM=","Source":"SkyBooker.NotificationService","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

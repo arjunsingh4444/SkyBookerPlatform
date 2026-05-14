@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../buildMultiTargeting/SkyBooker.PassengerService.props" />
-</Project>

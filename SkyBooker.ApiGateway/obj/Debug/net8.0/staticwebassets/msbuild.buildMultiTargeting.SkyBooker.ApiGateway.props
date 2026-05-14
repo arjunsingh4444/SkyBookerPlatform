@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/SkyBooker.ApiGateway.props" />
-</Project>

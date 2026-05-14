@@ -32,7 +32,6 @@
       },
       "Microsoft.AspNetCore.JsonPatch/8.0.11": {
         "dependencies": {
-          "Microsoft.CSharp": "4.7.0",
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
@@ -66,7 +65,6 @@
           }
         }
       },
-      "Microsoft.CSharp/4.7.0": {},
       "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
         "runtime": {
           "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
@@ -76,9 +74,6 @@
         }
       },
       "Microsoft.Extensions.DiagnosticAdapter/3.1.32": {
-        "dependencies": {
-          "System.Diagnostics.DiagnosticSource": "4.7.1"
-        },
         "runtime": {
           "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {
             "assemblyVersion": "3.1.32.0",
@@ -119,8 +114,7 @@
             "fileVersion": "23.4.2.0"
           }
         }
-      },
-      "System.Diagnostics.DiagnosticSource/4.7.1": {}
+      }
     }
   },
   "libraries": {
@@ -164,13 +158,6 @@
       "path": "microsoft.aspnetcore.mvc.newtonsoftjson/8.0.11",
       "hashPath": "microsoft.aspnetcore.mvc.newtonsoftjson.8.0.11.nupkg.sha512"
     },
-    "Microsoft.CSharp/4.7.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pTj+D3uJWyN3My70i2Hqo+OXixq3Os2D1nJ2x92FFo6sk8fYS1m1WLNTs0Dc1uPaViH0YvEEwvzddQ7y4rhXmA==",
-      "path": "microsoft.csharp/4.7.0",
-      "hashPath": "microsoft.csharp.4.7.0.nupkg.sha512"
-    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/8.0.2": {
       "type": "package",
       "serviceable": true,
@@ -205,13 +192,6 @@
       "sha512": "sha512-U9c7ECxyYCYL5It+A04js79jtOba6N9ZAunfReRu+/RMLNQoNve+AZLJQe+E4SWNtjFfH+64nR7O+5neMnaCuw==",
       "path": "ocelot/23.4.2",
       "hashPath": "ocelot.23.4.2.nupkg.sha512"
-    },
-    "System.Diagnostics.DiagnosticSource/4.7.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-j81Lovt90PDAq8kLpaJfJKV/rWdWuEk6jfV+MBkee33vzYLEUsy4gXK8laa9V2nZlLM9VM9yA/OOQxxPEJKAMw==",
-      "path": "system.diagnostics.diagnosticsource/4.7.1",
-      "hashPath": "system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
     }
   }
 }

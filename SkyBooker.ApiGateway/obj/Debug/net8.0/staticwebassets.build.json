@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "Y5ZAfZK84RRUdzslDNnWI6Xw67juJ/xiuI45/mCA5nM=",
-  "Source": "SkyBooker.ApiGateway",
-  "BasePath": "_content/SkyBooker.ApiGateway",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"ahGIKd1fk1u2/4H8iBVTRPqK8+ohTkYTQlbRyKtgDlI=","Source":"SkyBooker.ApiGateway","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

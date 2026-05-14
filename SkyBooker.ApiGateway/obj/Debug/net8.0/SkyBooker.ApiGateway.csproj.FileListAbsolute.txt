@@ -26,11 +26,6 @@
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/SkyBooker.ApiGateway.sourcelink.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets.build.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets.development.json
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.SkyBooker.ApiGateway.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.build.SkyBooker.ApiGateway.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.SkyBooker.ApiGateway.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.SkyBooker.ApiGateway.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/scopedcss/bundle/SkyBooker.ApiGateway.styles.css
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/SkyBooke.47618D99.Up2Date
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/SkyBooker.ApiGateway.dll
@@ -38,3 +33,11 @@
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/SkyBooker.ApiGateway.pdb
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/SkyBooker.ApiGateway.genruntimeconfig.cache
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/ref/SkyBooker.ApiGateway.dll
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/bin/Debug/net8.0/SkyBooker.ApiGateway.staticwebassets.endpoints.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.ApiGateway/obj/Debug/net8.0/swae.build.ex.cache

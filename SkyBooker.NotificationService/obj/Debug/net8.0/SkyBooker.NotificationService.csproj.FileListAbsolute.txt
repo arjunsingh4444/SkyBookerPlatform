@@ -97,11 +97,6 @@
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/SkyBooker.NotificationService.sourcelink.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets.build.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets.development.json
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets/msbuild.SkyBooker.NotificationService.Microsoft.AspNetCore.StaticWebAssets.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets/msbuild.build.SkyBooker.NotificationService.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.SkyBooker.NotificationService.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.SkyBooker.NotificationService.props
-/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets.pack.json
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/scopedcss/bundle/SkyBooker.NotificationService.styles.css
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/SkyBooke.8B297C19.Up2Date
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/SkyBooker.NotificationService.dll
@@ -143,3 +138,14 @@
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/BouncyCastle.Crypto.dll
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/Razorpay.dll
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/bin/Debug/net8.0/SkyBooker.NotificationService.staticwebassets.endpoints.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/rjimswa.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/rjsmrazor.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/rjsmcshtml.dswa.cache.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets.build.json.cache
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/staticwebassets.build.endpoints.json
+/Users/arjunsingh/Documents/SkyBookerPlatform/SkyBooker.NotificationService/obj/Debug/net8.0/swae.build.ex.cache
